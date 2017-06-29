@@ -1,0 +1,131 @@
+ body {
+    padding-top: 70px;
+    height:800px;
+    /*width: 960px;*/
+    margin: 5px 12px 5px 12px;
+    font: 400 16px/1.5 cursive, verdana, arial, helvetica, sans-serif;
+    background-color:#DFE9CE;
+    background-attachment:scroll;
+    background:#F2BE91 ;
+    border-radius: 9.4% 4.4% 9.4% 2.4%;
+    }
+    
+h4 {
+       
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px  black;
+    font: 400 17px/1.6 cursive, verdana, arial, helvetica, sans-serif;
+    color: saddlebrown;
+        
+         }
+
+ 
+#footer {
+	clear: both;
+	/*height: 80px;*/
+	padding: 10px 10px;
+    margin: 5px 12px 5px 12px;
+	background: #C07736;
+	color: saddlebrown;
+    font: 400 16px/1.5 cursive, verdana, arial, helvetica, sans-serif;
+    align-content: center;
+    border-radius: 12.4% 11.4% 11.4% 12.4%;
+      
+}
+
+#footer p {
+    color: saddlebrown;
+	margin: 5px 5px 5px 5px;
+	text-align: center;
+	line-height: normal;
+    background:#C07736 ;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px  black;
+    font-size: 17px;
+    
+
+  
+}
+#nav {
+    clear: both;
+	/*height: 80px;*/
+	padding: 10px 10px;
+	background: #C07736;
+	color: saddlebrown;
+    font: 400 16px/1.5 cursive, verdana, arial, helvetica, sans-serif;
+    align-content: center;
+    border-radius: 12.4% 11.4% 11.4% 12.4%;
+    margin: 2px 11px 2px 11px;
+}
+#menu1{
+    
+    color: saddlebrown;
+    height: 450px;
+    /*width: 940px; */
+    padding: 10px 10px;
+    
+    background-color:#D2A176;
+    border-radius: 9.4% 4.4% 9.4% 2.4%;
+}
+#menu{
+    color: saddlebrown;
+    height: 450px;
+    /*width: 940px;*/
+    background-color:#D2A176;
+    border-radius: 9.4% 4.4% 9.4% 2.4%;
+    padding: 10px 10px;
+      
+}
+#ana{
+    color: saddlebrown;
+    /*width: 50px;*/
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 8.4% 0.4% 8.4% .4%;
+       
+}
+
+    /*.k {
+        background: cornflowerblue;
+        padding-top: 70px;
+        height: 500px;
+        width: 400px;
+        height: 500px;
+        margin: 0px 0px 10px 0px;
+    }
+
+    .b {
+        background: bisque;
+        padding-top: 70px;
+        height: 500px;
+        width: 400px;
+    
+        margin: 0px 0px 10px 0px;
+    }*/
+ul li{
+    color: saddlebrown;
+}
+ul.nav.navbar-nav.navbar-right{
+    margin: 5px 1px 1px 2px;
+}
+p{
+    color: saddlebrown;
+}
+.facebook {
+    
+    position: relative;
+   
+    border-radius: 8.4% 0.4% 8.4% .4%;
+}
+.instagram{
+     position: relative;
+   
+    border-radius: 8.4% 0.4% 8.4% .4%;
+}
+.mail{
+     position: relative;
+   
+    border-radius: 8.4% 0.4% 8.4% .4%;
+}
+a{
+    color: saddlebrown;
+    text-align:right;
+}
