@@ -1,51 +1,102 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="havaDurumuUygulaması">
 
 <head>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBZ1gHUWw-gA_qBZ_7tY2A46-Rx80QP2d8"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="../calisma/library/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="../calisma/library/angular.js"></script>
-    <script src="../calisma/library/main.js"></script>
-    <script src="../calisma/library/angular.min.js"></script>
+    <script src="../calisma/library/jquery-3.2.1.min.js"></script>
     <script src="../calisma/library/angular-route.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZ1gHUWw-gA_qBZ_7tY2A46-Rx80QP2d8&libraries=places"></script>
     <script src="../calisma/library/leaflet.js"></script>
     <script src="../calisma/library/angular-leaflet-directive.min.js"></script>
     <link rel="stylesheet" href="../calisma/library/leaflet.css" />
-<script src="../calisma/library/jquery-3.2.1.min.js"></script>
-
-
+    <Link rel=" stylesheet " href=" ../calisma/library/bootstrap.min.css ">
+    <Link rel=" stil sayfası " href=" ../calisma/library/autocomplete.css ">
     <link href="style.css" rel="stylesheet">
+    <script src="../calisma/library/app.js"></script>
+
+
+    <script src="../calisma/library/angularjs-google-maps.js"></script>
+    <script src="../calisma/library/app.js"></script>
+    <script src="../calisma/main.js"></script>
+    <script src="../calisma/service/googleGeocodeService.js"></script>
+    <script src="../calisma/library/ngAutoComplete.js"></script>
+
+
+
+
+
+    <!--<script async defer src="https://maps.googleapis.com/maps/api/lexical-botany-172212&callback=initMap"
+        type="text/javascript"></script>-->
     <meta charset="UTF-8">
     <title>stajj</title>
-    <script type="text/javascript" src="main.js"></script>
 
 </head>
 
-<body ng-controller="GoogleMapsController">
+<body ng-controller="MapsController">
 
     <nav class="navbar navbar-default" id="nav" role="navigation">
         <div class="navbar-header">
             <h4><a href="#"> HAVA DURUMU</a> </h4>
-
         </div>
         <ul class="nav navbar-nav navbar-right">
 
-            <li class=""><h4><a href="#">Anasayfa</a></h4></li>
+            <li class="">
+                <h4><a href="#">Anasayfa</a></h4>
+            </li>
 
         </ul>
-    </nav> 
+    </nav>
     <div class="container-fluid">
         <div class="ana">
             <div class="row">
                 <div id="menu1" class="col-sm-6">
-                
-                
+                    <!--<form class="form">
+                        <input class="form-control" g-places-autocomplete options="autocompleteOptions" ng-model="place"/>
+                        <h5>Sicaklik:</h5>
+                        <pre>{{sehir}}</pre>
+                    </form>-->
+                    <br>
+                    <form class="form" role="form">
+
+                        <div class="form-group move-down">
+                            <div class="input-group">
+                                <!--<input type="text" id="Autocomplete" class="form-control" ng-autocomplete details="details1" ng-model="result1" />
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span> -->
+                                <input id="pac-input" class="controls" type="text" placeholder="Enter a location">
+                                <div id="map"></div>
+                                <div id="infowindow-content">
+                                    <span id="place-name" class="title"></span><br> Place ID <span id="place-id"></span><br>
+                                    <span id="place-address"></span>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </form>
+                    <div id="sonuc">{{result1}}</div>
+                    <!--<h5>Result:</h5>
+                   
+                    <pre>{{coords}}</pre>-->
+                    <ul>
+                        <li id="lat" ng-model="london.lat">Lat: {{ coords[0] }}</li>
+                        <li id="lng" ng-model="london.lng">Lng: {{ coords[1] }}</li>
+                    </ul>
+
+
                 </div>
 
                 <div id="menu" class="col-sm-6">
-                    
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3701644.3237664285!2d31.120380414366814!3d40.37016604177814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d347d520732db1%3A0xbdc57b0c0842b8d!2sAnkara!5e0!3m2!1str!2str!4v1498723854401" width="390" height="434" frameborder="" style="border:0" allowfullscreen></iframe>
+
+                    <div id="map">
+
+                        <leaflet class="harita" width="98%" height="98%" lf-center="" markers="markers"></leaflet>
+                        <img src="img/marker-icon.png" width="28px" height="28px">
+                    </div>
                 </div>
             </div>
         </div>
@@ -54,7 +105,7 @@
     <div id="footer">
         <p>Meteoroloji Yanılmaz!<br /></p>
         <p id="links">
-            <a href="https://www.facebook.com/" class="facebook" target="_blank" title="Facebook"><img src="img/fb.png" width="38px" height="38px"></a> |
+            <a href="https://www.facebook.com/" class="facebook" target="_blank" title="Facebook"><img src="img/fb.png" width="38px" height="38px"></a>            |
             <a href="https://www.instagram.com/siremsoydann/?hl=tr" class="instagram" target="_blank" title="Instagram"><img src="img/ins.png" width="38px" height="38px"></a>|
             <a href="#" class="mail" target="_blank" title="siremsoydan96@gmail.com"><img src="img/ml.png" width="38px" height="38px"></a>
         </p>
