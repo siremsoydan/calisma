@@ -1,5 +1,5 @@
  body {
-    padding-top: 70px;
+    /*padding-top: 70px;*/
     height:800px;
     /*width: 960px;*/
     margin: 5px 12px 5px 12px;
@@ -29,19 +29,17 @@ h4 {
     font: 400 16px/1.5 cursive, verdana, arial, helvetica, sans-serif;
     align-content: center;
     border-radius: 12.4% 11.4% 11.4% 12.4%;
-      
+    font-size: 17px;  
 }
 
 #footer p {
-    color: saddlebrown;
 	margin: 5px 5px 5px 5px;
 	text-align: center;
 	line-height: normal;
     background:#C07736 ;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px  black;
-    font-size: 17px;
-    
-
+    font: 400 17px/1.6 cursive, verdana, arial, helvetica, sans-serif;
+    color: saddlebrown;
   
 }
 #nav {
@@ -61,7 +59,6 @@ h4 {
     height: 450px;
     /*width: 940px; */
     padding: 10px 10px;
-    
     background-color:#D2A176;
     border-radius: 9.4% 4.4% 9.4% 2.4%;
 }
@@ -129,3 +126,80 @@ a{
     color: saddlebrown;
     text-align:right;
 }
+#harita{
+    width: 10000px;
+}
+span i {
+    margin: 1px 1px 1px 1px;
+    height: 10px;
+    color: saddlebrown;
+}
+.input-group-addon{
+    width:30px;
+    background-color: bisque;
+    border-color: saddlebrown;
+}
+#Autocomplete{
+    width: 100px;
+    background-color: bisque;
+    border-color: saddlebrown;
+}
+form{
+    background-color: bisque;
+}
+#sonuc{
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px  black;
+    font: 400 17px/1.6 cursive, verdana, arial, helvetica, sans-serif;
+    color: saddlebrown;
+        
+}
+form .ng-pristine.ng-valid{
+    background-color: bisque;
+
+}
+form.ng-valid.ng-dirty.ng-valid-parse{
+    background-color: bisque;
+}
+form.form-control.ng-valid.ng-isolate-scope.ng-dirty.ng-valid-parse.ng-touched.ng-not-empty{
+    background-color:#D2A176;
+    border-color:#D2A176;
+}
+.navbar-default {
+    background-color:#D2A176;
+    border-color:#D2A176;
+}
+div.input-group{
+    background-color:#D2A176;
+    border-color:#D2A176;
+    font: 400 17px/1.6 cursive, verdana, arial, helvetica, sans-serif;
+}
+.move-down {
+    margin-top: 100px;
+}
+ input {
+            width: 100px;
+            margin-right: 7px;
+        }
+        #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #floating-panel {
+        position: absolute;
+        top: 10px;
+        left: 25%;
+        z-index: 5;
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;
+        text-align: center;
+        font-family: 'Roboto','sans-serif';
+        line-height: 30px;
+        padding-left: 10px;
+      }
+      
